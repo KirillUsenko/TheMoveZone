@@ -1,0 +1,71 @@
+.type {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    height: 250px;
+    transition: border .3s ease;
+
+    &:hover {
+        border: 1px solid #fff;
+    }
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+
+    & img {
+        border-radius: 10px;
+    }
+}
+
+.image_new {
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 110px;
+        height: 110px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url('../public/types/new.svg') no-repeat center;
+        background-size: 100%;
+    }
+}
+
+.title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.3em;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1070px) {
+    .image_new::after {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .title {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .image_new::after {
+        width: 90px;
+        height: 90px;
+    }
+}

@@ -1,0 +1,120 @@
+.slider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__arrow {
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: background .3s ease;
+
+    & svg path {
+        transition: fill .3s ease;
+    }
+
+    &:hover {
+        background: #fff;
+
+        & svg path {
+            fill: #0E0F10;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.slider__dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.slider__dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #3A3A3A;
+    border: 1px solid #3A3A3A;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    position: relative;
+    margin-right: 49px;
+    line-height: 1.45em;
+    transition: border .3s ease, color .3s ease;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        width: 49px;
+        height: 1px;
+        display: block;
+        background-color: #3A3A3A;
+        position: absolute;
+        right: -49px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    &:hover {
+        border: 1px solid #fff;
+        color: #fff;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:last-child::after {
+        display: none;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &.slider__dot_active {
+        color: #fff;
+        border: 1px solid #fff;
+    }
+}
+
+
+@media screen and (max-width: 790px) {
+    .slider__dots {
+        margin: 0;
+    }
+    
+    .slider__dot {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        margin-right: 16px;
+
+        &::after {
+            width: 16px;
+            right: -16px;
+        }
+    }
+
+    .slider__arrow {
+        width: 32px;
+        height: 32px;
+
+        & svg {
+            width: 10px;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+.card {
+    max-width: 300px;
+    min-height: 283px;
+    border-radius: 10px;
+    background-color: #18191B;
+    border: 1px solid #3A3A3A;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid transparent;
+    transition: border .3s ease;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid #000099;
+    }
+}
+
+.card_new {
+    border: 1px solid #FF5E62;
+
+    &:hover {
+        border: 1px solid #FF5E62;  
+    }
+}
+
+.card__header {
+    margin-top: -15px;
+    margin-right: -15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card__percent {
+    width: 75px;
+    height: 30px;
+    border-radius: 15px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.25em;
+    background-image: linear-gradient(45deg, #000099, #660099);
+}
+
+.card__new {
+    margin-left: 100px;
+    width: 65px;
+    height: 30px;
+    border-radius: 15px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1.25em;
+    margin-right: 10px;
+    background-image: linear-gradient(45deg, #FF9966, #FF5E62);
+}
+
+.card__title {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.card__content {
+    font-size: 16px;
+    line-height: 1.45em;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.card__price {
+    margin: auto;
+    text-align: center;
+}
+
+.card__price_new {
+    font-size: 20px;
+    line-height: 1.3em;
+    font-weight: 700;
+    margin-right: 10px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(45deg, #FF9966, #FF5E62);
+
+    &::after {
+        content: url('../public/prices/icon.svg');
+    }
+}
+
+.card__price_old {
+    line-height: 1.45em;
+    color: #747576;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        background-color: #FF5F5F;
+        width: 48px;
+        height: 1px;
+        position: absolute;
+        left: 2px;
+        z-index: 1;
+        bottom: 7px;
+        transform: rotate(-7deg);
+    }
+
+    &::after {
+        content: url('../public/prices/icon-min.svg');
+    }
+}
+
+.card__button {
+    width: 250px;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+    cursor: pointer;
+    transition: color .3s ease, background .3s ease;
+
+    &:hover {
+        background: #fff;
+        color: #0E0F10;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .card {
+        max-width: 290px;
+    }
+}
