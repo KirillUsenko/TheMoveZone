@@ -27,7 +27,7 @@
     border-radius: 20px;
     background-color: #18191B;
     margin: auto;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .modal_active {
@@ -41,12 +41,6 @@
 .modal_ref .modal__content {
     padding: 40px 0 65px 80px;
     max-width: 886px;
-}
-
-@media screen and (min-height: 1236px) {
-    .modal {
-        overflow-y: hidden;
-    }
 }
 
 @media screen and (max-width: 1340px) {
